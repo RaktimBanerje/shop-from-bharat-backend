@@ -21,7 +21,7 @@ const razorpayRoutes = require("./routes/razorpay")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-const allowedOrigins = ['http://localhost:3000', 'http://16.171.24.125', 'http://13.210.82.75', 'https://shopfrombharat.com'];
+const allowedOrigins = ['http://localhost:3000', 'http://16.171.24.125', 'http://13.210.82.75', 'https://shopfrombharat.com', 'https://shop-from-bharat.vercel.app'];
 
 app.use(cors({
   // origin: function (origin, callback) {
