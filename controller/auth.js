@@ -72,7 +72,7 @@ const sendEmailOtp = async (email, password, name, contactNumber) => {
 const verifyEmailOtp = async (email, otp, jwtSecret) => {
   try {
 
-    const secret = jwt.verify(jwtSecret, process.env.JWT_SECRET);
+    const secret = jwt.verify(jwtSecret, "SHOP-FROM-BHARAT");
     email = email.toLowerCase();
 
     if (secret.email == email && secret.otp == otp) {
@@ -92,7 +92,7 @@ const verifyEmailOtp = async (email, otp, jwtSecret) => {
       
       await user.updateOne({ email: email }, body);
 
-      const jwtSign = jwt.sign( { token: insertUser._id },  process.env.JWT_TOKEN_SECRET);
+      const jwtSign = jwt.sign( { token: insertUser._id },  "SHOP-FROM-BHARAT");
 
       //push notification here
     //   let notificationBody = {
@@ -143,7 +143,7 @@ const verifyEmailLogin = async (email, password, deviceToken) => {
     }
 
     // Generate JWT token for authentication
-    const jwtSign = jwt.sign({ token: isUserExist._id }, process.env.JWT_TOKEN_SECRET);
+    const jwtSign = jwt.sign({ token: isUserExist._id }, "SHOP-FROM-BHARAT");
 
     return {
       status: true,

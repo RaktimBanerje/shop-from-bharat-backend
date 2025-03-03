@@ -8,7 +8,7 @@ const verifyToken = (req, res, next) => {
             return res.status(403).send({ status: false, message: "No token provided"}) 
         }
 
-        const user = jwt.decode(token, process.env.JWT_TOKEN_SECRET)
+        const user = jwt.decode(token, "SHOP-FROM-BHARAT")
         if(!( user && user.token)) {
             return res.status(401).send({ status: false, message: "unauthorized access!"}) 
         }
