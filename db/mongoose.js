@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 
 const connect = () => {
     mongoose.connect(
-        "mongodb+srv://raktimbanerjee9:QzaKaTq2i0rpswoO@cluster-1.m88as.mongodb.net/test-db?retryWrites=true&w=majority&appName=cluster-1",
+        "mongodb+srv://raktim:c0F1XUWhVu24vuFu@cluster0.m88as.mongodb.net/shop-from-bharat?retryWrites=true&w=majority&appName=Cluster0",
         { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true },
         err => {
             if (err) {
